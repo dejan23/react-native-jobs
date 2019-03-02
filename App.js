@@ -1,6 +1,6 @@
 import React from 'react';
-import {Notifications} from 'expo'
-import {Alert} from 'react-native'
+import { Notifications } from 'expo'
+import { Alert } from 'react-native'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { AsyncStorage } from 'react-native'
@@ -17,13 +17,13 @@ class App extends React.Component {
     registerForNotifications()
 
     Notifications.addListener((notification) => {
-      const {data: {text}, origin} = notification
+      const { data: { text }, origin } = notification
 
-      if(origin === 'received' && text) {
+      if (origin === 'received' && text) {
         Alert.alert(
           'New Push Notification',
           text,
-          [{text: 'ok'}]
+          [{ text: 'ok' }]
         )
       }
     })
