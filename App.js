@@ -1,9 +1,8 @@
 import React from 'react';
 import { Notifications } from 'expo'
-import { Alert } from 'react-native'
+import { Alert, AsyncStorage } from 'react-native'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import { AsyncStorage } from 'react-native'
 
 import configureStore from './src/store'
 const { persistor, store } = configureStore()
